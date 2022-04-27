@@ -23,4 +23,5 @@ need to create super user
 
 py manage.py createsuperuser
 
-make password easy for this stuff, for actual use a good password.
+make password easy for this stuff, for actual use a good password. name: admin
+pass:1234
