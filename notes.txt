@@ -25,3 +25,36 @@ py manage.py createsuperuser
 
 make password easy for this stuff, for actual use a good password. name: admin
 pass:1234
+
+overall making pages
+step 1:
+defining URL
+
+initial stuff:
+
+proj file urls 
+from django.urls import path, include
+
+add the following to the urlpatterns list
+path('', include('MainApp.urls'))
+
+create a similar urls.py in the app folder mentions
+
+refer to urls.py in the other project
+
+step 2: writing views
+
+refer to views.py in MainApp
+
+when i create a context dictionary, the key is what I use in html, the value is what I use in the view file.
+
+step 3: writing templates
+
+create templates folder in MainApp, then create mainapp in templates
+(note:it should be the lowercase version of your app name)
+finally create index.html (or whatever it is)
+
+
+html note:
+template tags - {% %}
+template variables - {{}}
