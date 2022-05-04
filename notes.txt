@@ -4,13 +4,13 @@ pip install -r requirements.txt
 
 django-admin startproject pizza_place .
 
-py manage.py migrate 
+python manage.py migrate 
 
-py manage.py runserver 
+python manage.py runserver 
 
 go to the debug with manage.py selected, then select create json file, choose django and now there's a debugger.
 
-py manage.py startapp MainApp
+python manage.py startapp MainApp
 have to add new app to the installed apps in settings.py
 
 
