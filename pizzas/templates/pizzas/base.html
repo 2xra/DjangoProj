@@ -1,0 +1,50 @@
+
+    <style>
+        a:link {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:visited {
+          color: pink;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          color: rgb(255, 174, 0);
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        
+        a:active {
+          color: yellow;
+          background-color: transparent;
+          text-decoration: underline;
+        }</style>
+         <body style="background-color:rgb(173, 42, 10);">
+
+<p>
+    <a href="{% url 'pizzas:homepage' %}">{% load static %} <img src ="{% static  "pizzas/media/logo.bmp" %}" width="150" height="150" alt={{pizza}}
+        </a>
+        
+    
+
+</p>
+<p>
+            <a href="{% url 'pizzas:pizzas' %}">Pick-A-Pizza</a>
+        </p>
+
+{% if user.is_authenticated %}
+Hello, {{ user.username }}
+
+<a href="{% url 'users:logout' %}">Log Out</a>
+{% else %}
+<a href="{% url 'users:register' %}">Register</a>
+<a href="{% url 'users:login' %}">Log in</a>
+{% endif %}
+{% block content %}
+
+
+{% endblock content %}</body>
